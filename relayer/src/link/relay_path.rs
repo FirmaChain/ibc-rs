@@ -1055,8 +1055,8 @@ impl<ChainA: ChainHandle, ChainB: ChainHandle> RelayPath<ChainA, ChainB> {
                 }
             }
             info!(
-                "found unprocessed SendPacket events for {:?} (first 10 shown here; total={})",
-                packet_sequences,
+                "found unprocessed SendPacket events for {} (first 10 shown here; total={})",
+                packet_sequences.iter().format(", "),
                 events_result.len()
             );
         }
@@ -1143,8 +1143,8 @@ impl<ChainA: ChainHandle, ChainB: ChainHandle> RelayPath<ChainA, ChainB> {
                 }
             }
             info!(
-                "found unprocessed WriteAcknowledgement events for {:?} (first 10 shown here; total={})",
-                packet_sequences,
+                "found unprocessed WriteAcknowledgement events for {} (first 10 shown here; total={})",
+                packet_sequences.iter().format(", "),
                 events_result.len(),
             );
         }
